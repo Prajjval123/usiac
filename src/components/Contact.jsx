@@ -270,7 +270,7 @@ const Contact = () => {
               className="
                 w-full
                 py-3
-                mt-2
+                mt-2 
                 /*bg-gradient-to-r
                 from-[#ff0080]
                 to-black*/
