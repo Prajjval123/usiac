@@ -10,3 +10,15 @@
     scrollbar-width: none;     /* Firefox */
   }
   
+  .custom-dropdown {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* background-image: url("/assets/projectproducts/dropdown/dropdown-svg.svg"); */
+    background-repeat: no-repeat;
+    background-position: calc(100% - 0.5rem) center;
+    background-size: 1rem;
+  }
+
+  
+  

@@ -14,7 +14,16 @@ const Header = () => {
 
   const { homepageData, loading, error } = useContext(GlobalContext);
   // const links = homepageData?.header?.links || [];
-  const links = ["Home", "About Us", "Product & Projects", "Artworks", "Exhibition", "Art History", "Infrastructure", "Login"];
+  const links = [
+    { name: "Home", url: "/home" },
+    { name: "About Us", url: "/about-us" },
+    { name: "Product & Projects", url: "projects-products" },
+    { name: "Artworks", url: "artworks" },
+    { name: "Exhibition", url: "exhibitions" },
+    { name: "Art History", url: "art-history" },
+    { name: "Infrastructure", url: "infrastructure" },
+    { name: "Login", url: "login" },
+  ];
 
   // GSAP Refs
   const headerRef = useRef(null);
@@ -65,17 +74,21 @@ const Header = () => {
         }
       );
     });
-  }, [loading, error, homepageData, links]);
+  }, [loading, error, homepageData]);
 
   return (
     <header
       ref={headerRef}
       className=" z-[100] flex items-center h-24 py-4 px-4 sm:px-6 lg:px-12"
     >
-      <div className="bg-black w-full mx-auto flex justify-between items-center">
+      <div className="w-full mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/home">
-          <img src="/assets/US-INDIA-Logo.jpg" alt="Logo" className="w-44 mt-4" />
+          <img
+            src="/assets/US-INDIA-Logo.jpg"
+            alt="Logo"
+            className="w-44 mt-4"
+          />
         </Link>
 
         {/* Hamburger Icon for small & medium screens */}
@@ -118,9 +131,9 @@ const Header = () => {
                   }
                 >
                   <Link
-                    to={`/${link.toLowerCase()}`}
-                    className={`hover:text-red-500 transform transition-transform duration-300 hover:scale-105 cursor-pointer text-md lg:text-md  ${
-                      selected === link ? "text-red-500 " : "text-white"
+                    to={link.url}
+                    className={`hover:text-[#e4005e]  tracking-wide transform transition-transform duration-300 hover:scale-105 cursor-pointer text-md lg:text-md  ${
+                      selected === link ? "text-[#e4005e] " : "text-white"
                     } ${
                       link === "Login"
                         ? "bg-pink-600 hover:bg-pink-700 rounded p-0.5 px-4 text-white"
@@ -136,7 +149,7 @@ const Header = () => {
                       if (link === "Services") e.preventDefault();
                     }}
                   >
-                    {link}
+                    {link.name}
                   </Link>
                 </div>
 

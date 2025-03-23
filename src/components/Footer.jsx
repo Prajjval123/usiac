@@ -1,9 +1,13 @@
 // src/components/Footer.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10 px-4 md:px-8">
+    <footer
+      className="bg-black text-white py-10 px-4 md:px-8 bg-center"
+      style={{ backgroundImage: "url('/assets/herobg.png')" }}
+    >
       <div className="max-w-6xl mx-auto">
         {/* Top Section: 3 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -14,49 +18,65 @@ const Footer = () => {
             </h2>
             <ul className="space-y-3">
               {/* Facebook */}
-              <li className="flex items-center space-x-3">
-                {/* Icon Box */}
-                <img
-                  src="/assets/For developer/FB.png"
-                  alt=""
-                  className="w-6 lg:w-6 h-6 lg:h-6 rounded-md"
-                />
-                <span>Facebook</span>
-              </li>
+              <a rel="stylesheet" href="https://www.facebook.com/usiac/" className="flex items-center space-x-3">
+                <li className="flex items-center space-x-3">
+                  {/* Icon Box */}
+                  <img
+                    src="/assets/For developer/FB.png"
+                    alt=""
+                    className="w-6 lg:w-6 h-6 lg:h-6 rounded-md"
+                  />
+                  <span>Facebook</span>
+                </li>
+              </a>
+
               {/* Instagram */}
-              <li className="flex items-center space-x-3">
-                <img
-                  src="/assets/For developer/Insta.png"
-                  alt=""
-                  className="w-6 lg:w-6 h-6 lg:h-6 rounded-md"
-                />
-                <span>Instagram</span>
-              </li>
+              <a rel="stylesheet" href="https://www.instagram.com/usiac_oq/" className="flex items-center space-x-3">
+                <li className="flex items-center space-x-3">
+                  <img
+                    src="/assets/For developer/Insta.png"
+                    alt=""
+                    className="w-6 lg:w-6 h-6 lg:h-6 rounded-md"
+                  />
+                  <span>Instagram</span>
+                </li>
+              </a>
               {/* Pinterest */}
-              <li className="flex items-center space-x-3">
-              <img
-                  src="/assets/Pinterest.png"
-                  alt=""
-                  className="w-6 lg:w-6 h-6 lg:h-6 rounded-md"
-                />
-                <span>Pinterest</span>
-              </li>
+              <a
+                rel="stylesheet"
+                href="https://in.pinterest.com/usindiaartandcultureexchangece/"
+                className="flex items-center space-x-3"
+              >
+                <li className="flex items-center space-x-3">
+                  <img
+                    src="/assets/Pinterest.png"
+                    alt=""
+                    className="w-6 lg:w-6 h-6 lg:h-6 rounded-md"
+                  />
+                  <span>Pinterest</span>
+                </li>
+              </a>
               {/* X (formerly Twitter) */}
-              <li className="flex items-center space-x-3">
-              <img
-                  src="/assets/TWITTER.png"
-                  alt=""
-                  className="w-6 lg:w-6 h-6 lg:h-6 rounded-md"
-                />
-                <span>X</span>
-              </li>
+
+              <a href="https://x.com/USIAC" className="flex items-center space-x-3">
+                <li className="flex items-center space-x-3">
+                  <img
+                    src="/assets/TWITTER.png"
+                    alt=""
+                    className="w-6 lg:w-6 h-6 lg:h-6 rounded-md"
+                  />
+                  <span>X</span>
+                </li>
+              </a>
               {/* LinkedIn */}
-              <li className="flex items-center space-x-3">
-                <span className="inline-flex items-center justify-center w-6 h-6 bg-[#ff0080] text-white text-sm font-bold">
-                  in
-                </span>
-                <span>LinkedIn</span>
-              </li>
+              <a href="https://www.linkedin.com/company/us-india-art-and-culture-exchange-center/about/" className="flex items-center space-x-3">
+                <li className="flex items-center space-x-3">
+                  <span className="inline-flex items-center justify-center w-6 h-6 bg-[#ff0080] text-white text-sm font-bold">
+                    in
+                  </span>
+                  <span>LinkedIn</span>
+                </li>
+              </a>
             </ul>
           </div>
 
@@ -67,29 +87,32 @@ const Footer = () => {
             </h2>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#what-we-do" className="hover:text-[#ff0080]">
+                <Link to="what-we-do" className="hover:text-[#ff0080]">
                   What We Do
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#for-artist" className="hover:text-[#ff0080]">
+                <Link to="what-we-do" className="hover:text-[#ff0080]">
                   For Artist
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#from-the-founder" className="hover:text-[#ff0080]">
+                <Link to="what-we-do" className="hover:text-[#ff0080]">
                   From The Founder
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#privacy-policy" className="hover:text-[#ff0080]">
+                <Link to="privacy-policy" className="hover:text-[#ff0080]">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#terms" className="hover:text-[#ff0080]">
+                <Link
+                  to="terms-and-conditions"
+                  className="hover:text-[#ff0080]"
+                >
                   Terms &amp; Conditions
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -18,6 +18,16 @@ import ThankYouPage from "./pages/ThankYouPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { GlobalProvider } from "./context/GlobalContext";
 import PopupModal from "./components/PopupModal";
+import ProjectsProducts from "./pages/ProjectsProducts";
+import ArtHistory from "./pages/ArtHistory";
+import Exhibitions from "./pages/Exhibitions";
+import ArtWorksPage from "./pages/ArtWorks";
+import Infrastructure from "./pages/Infrastructure";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import ForgotPassword from "./pages/ForgotPassword";
+import WhatWeDo from "./pages/WhatWeDo";
+import TermsConditions from "./pages/TermsCondition";
 
 const App = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -37,8 +47,7 @@ const App = () => {
   return (
     <Router>
       <GlobalProvider>
-        {/* 1) Add `overflow-x-hidden` so no horizontal scrollbar can appear */}
-        <div className="bg-[hsl(219,50%,5%)] min-h-screen flex flex-col font-barlow text-white overflow-x-hidden">
+        <div className="bg-black min-h-screen flex flex-col font-barlow text-white overflow-x-hidden">
           {showPopup && <PopupModal onClose={handleClosePopup} />}
 
           <main className="flex-grow">
@@ -50,8 +59,18 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/privacy policy" element={<PrivacyPolicy />} />
+                <Route path="/about-us" element={<About />} />
+                <Route path="/projects-products" element={<ProjectsProducts />} />
+                <Route path="/artworks" element={<ArtWorksPage />} />
+                <Route path="/art-history" element={<ArtHistory />} />
+                <Route path="/exhibitions" element={<Exhibitions />} />
+                <Route path="/infrastructure" element={<Infrastructure />} />
+                <Route path="/login" element={<Login />} />
+                <Route path='/signup' element={<Signup />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route path="/what-we-do" element={<WhatWeDo />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-and-conditions" element={<TermsConditions />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/services/:serviceName" element={<ServicePage />} />
                 <Route path="/products" element={<Products />} />

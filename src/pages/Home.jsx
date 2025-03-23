@@ -1,16 +1,16 @@
 import React from 'react'
 import Hero from '../components/Hero'
 import HomeAbout from '../components/HomeAbout';
-import ProductsProjects from '../components/ProductsProjects';
 import ArtWorks from '../components/ArtWorks';
 import Contact from '../components/Contact';
+import HomeProjectsProducts from '../components/HomeProjectsProducts';
 
 const Home = () => {
   return (
     <div>
       <Hero />
       <HomeAbout />
-      <ProductsProjects />
+      <HomeProjectsProducts />
       <ArtWorks />
       <Contact />
     </div>
