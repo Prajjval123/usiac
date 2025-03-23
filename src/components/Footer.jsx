@@ -8,6 +8,7 @@ const Footer = () => {
       className="bg-black text-white py-10 px-4 md:px-8 bg-center"
       style={{ backgroundImage: "url('/assets/herobg.png')" }}
     >
+      
       <div className="max-w-6xl mx-auto">
         {/* Top Section: 3 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
