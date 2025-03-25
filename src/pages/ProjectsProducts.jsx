@@ -106,7 +106,7 @@ const dummyProducts = [
 ];
 
 const ProductCard = ({ product }) => (
-  <div className="bg-black text-white  rounded-xl border border-gray-700 h-[34rem] shadow-md overflow-hidden hover:shadow-2xl hover:shadow-[#e4005e] hover:transition-transform hover:translate-z-72 hover: transition-shadow duration-300">
+  <div className="bg-black text-white  rounded-xl border cursor-pointer border-gray-700 h-[34rem] shadow-md overflow-hidden hover:shadow-2xl hover:shadow-[#e4005e] hover:transition-transform hover:translate-z-72 hover: transition-shadow duration-300">
     <div className="relative p-4 rounded-lg">
       <img
         src={product.image}
@@ -122,7 +122,6 @@ const ProductCard = ({ product }) => (
   </div>
 );
 
-// Main component
 
 const ProjectsProducts = () => {
   const [category, setCategory] = useState("Any Category");
@@ -130,8 +129,10 @@ const ProjectsProducts = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredProducts = dummyProducts.filter((product) => {
-    const matchCategory = category === "Any Category" || product.category === category;
-    const matchSubcategory = subcategory === "All Subcategory" || product.subcategory === subcategory;
+    const matchCategory =
+      category === "Any Category" || product.category === category;
+    const matchSubcategory =
+      subcategory === "All Subcategory" || product.subcategory === subcategory;
     const matchSearch =
       product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       product.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -140,19 +141,20 @@ const ProjectsProducts = () => {
 
   const handleSearch = () => {
     console.log("Searching for:", { category, subcategory, searchQuery });
-    // Filtering happens automatically via filteredProducts.
   };
 
   return (
-    <div className="min-h-screen bg-black text-white py-12 bg-center" style={{ backgroundImage: "url('/assets/bg-image1.png')" }}>
+    <div
+      className="min-h-screen bg-black text-white py-12 bg-center"
+      style={{ backgroundImage: "url('/assets/bg-image1.png')" }}
+    >
       <div className="mx-auto px-6">
         <h1 className="text-5xl font-bold text-center text-[#e4005e] mb-10 uppercase">
           Projects &amp; Products
         </h1>
         <div className="space-y-8">
           {/* Search & Filter Controls */}
-          <div className="flex flex-wrap items-center justify-center space-x-4 py-4 px-24 rounded-lg w-full bg-gray-900">
-            {/* Category Dropdown */}
+          <div className="flex flex-wrap items-center justify-center gap-4 py-4 px-4 md:px-24 rounded-lg w-full bg-gray-900">
             <div className="relative">
               <select
                 value={category}
@@ -171,7 +173,6 @@ const ProjectsProducts = () => {
               </span>
             </div>
 
-            {/* Subcategory Dropdown */}
             <div className="relative">
               <select
                 value={subcategory}
@@ -179,23 +180,20 @@ const ProjectsProducts = () => {
                 className="appearance-none px-4 py-3 border border-gray-500 bg-black text-white rounded min-w-[12rem] transition-all duration-300 outline-none focus:border-[#ff0080] hover:border-[#ff0080] focus:ring-2 focus:ring-[#ff0080] pr-8 text-sm"
               >
                 <option>All Subcategory</option>
-                {/* Add more subcategory options if needed */}
               </select>
               <span className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-300 text-xs">
                 ▼
               </span>
             </div>
 
-            {/* Search Input Field */}
             <input
               type="text"
               placeholder="Search"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="px-4 py-3 border border-gray-500 bg-black text-white rounded flex-grow transition-all duration-300 outline-none focus:border-[#ff0080] hover:border-[#ff0080] focus:ring-2 focus:ring-[#ff0080] text-sm min-w-[20rem]"
+              className="px-4 py-3 border border-gray-500 bg-black text-white rounded flex-grow transition-all duration-300 outline-none focus:border-[#ff0080] hover:border-[#ff0080] text-sm min-w-[20rem]"
             />
 
-            {/* Search Button */}
             <div className="group relative inline-block">
               <button
                 onClick={handleSearch}
@@ -206,7 +204,6 @@ const ProjectsProducts = () => {
               </button>
             </div>
 
-            {/* Reset Button */}
             <div className="group relative inline-block">
               <button
                 onClick={() => {
@@ -233,8 +230,5 @@ const ProjectsProducts = () => {
     </div>
   );
 };
-
-
-
 
 export default ProjectsProducts;

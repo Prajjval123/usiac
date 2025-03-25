@@ -160,7 +160,7 @@ const About = () => {
       <section className="mb-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-12">
           <div className="md:col-span-2 space-y-6">
-            <h2 className="text-2xl font-semibold">PROFILE OF MR. DIAL V. GIDWANI</h2>
+            <h2 className="text-center md:text-left text-2xl font-semibold">PROFILE OF MR. DIAL V. GIDWANI</h2>
             <p className="text-justify">
               A versatile personality and a gentleman with dynamism, Mr. Gidwani has been a driving force behind
               the inclusion of Indian talent in international art programs. He is the founding President of the
@@ -180,7 +180,7 @@ const About = () => {
             />
           </div>
           <div className="md:col-span-2 space-y-6">
-            <h2 className="text-2xl font-semibold">PROFILE OF MR. ARNAB PAUL</h2>
+            <h2 className="text-2xl font-semibold text-center md:text-left">PROFILE OF MR. ARNAB PAUL</h2>
             <p className="text-justify">
               Mr. Paul is a pivotal figure in India, bridging institutions and talent to make international art exchange
               programs a reality. Based in New Delhi and Kolkata, his efforts have been crucial in nurturing emerging talent

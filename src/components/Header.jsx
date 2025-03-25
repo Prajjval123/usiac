@@ -79,7 +79,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className=" z-[100] flex items-center h-24 py-4 px-4 sm:px-6 lg:px-12"
+      className="relative z-[100] flex items-center h-24 py-4 px-4 sm:px-6 lg:px-12"
     >
       <div className="w-full mx-auto flex justify-between items-center">
         {/* Logo */}
@@ -95,16 +95,16 @@ const Header = () => {
         <div className="ml-auto block lg:hidden">
           <button onClick={toggleSidebar}>
             {isSidebarOpen ? (
-              <FaTimes className="text-2xl" />
+              <FaTimes className="text-2xl cursor-pointer" />
             ) : (
-              <FaBars className="text-2xl" />
+              <FaBars className="text-2xl cursor-pointer" />
             )}
           </button>
         </div>
 
         {/* Desktop Nav for large screens */}
         <nav>
-          <ul className="hidden lg:flex space-x-8 mx-auto font-light">
+          <ul className="hidden lg:flex space-x-8 mx-auto font-light whitespace-nowrap flex-wrap justify-center">
             {links.map((link, index) => (
               <li
                 key={link}

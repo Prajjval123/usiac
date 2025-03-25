@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -8,20 +7,33 @@ const Footer = () => {
       className="bg-black text-white py-10 px-4 md:px-8 bg-center"
       style={{ backgroundImage: "url('/assets/herobg.png')" }}
     >
-      
       <div className="max-w-6xl mx-auto">
         {/* Top Section: 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div
+          className="
+            grid
+            grid-cols-1
+            md:grid-cols-3
+            gap-8
+            mb-8
+            text-center
+            md:place-items-center
+            lg:place-items-start
+          "
+        >
           {/* Column 1: Follow Us */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 lg:text-left">
             <h2 className="text-white text-lg font-semibold uppercase">
               Follow us on:
             </h2>
             <ul className="space-y-3">
               {/* Facebook */}
-              <a rel="stylesheet" href="https://www.facebook.com/usiac/" className="flex items-center space-x-3">
+              <a
+                rel="stylesheet"
+                href="https://www.facebook.com/usiac/"
+                className="flex items-center space-x-3 justify-center lg:justify-start"
+              >
                 <li className="flex items-center space-x-3">
-                  {/* Icon Box */}
                   <img
                     src="/assets/For developer/FB.png"
                     alt=""
@@ -32,7 +44,11 @@ const Footer = () => {
               </a>
 
               {/* Instagram */}
-              <a rel="stylesheet" href="https://www.instagram.com/usiac_oq/" className="flex items-center space-x-3">
+              <a
+                rel="stylesheet"
+                href="https://www.instagram.com/usiac_oq/"
+                className="flex items-center space-x-3 justify-center lg:justify-start"
+              >
                 <li className="flex items-center space-x-3">
                   <img
                     src="/assets/For developer/Insta.png"
@@ -42,11 +58,12 @@ const Footer = () => {
                   <span>Instagram</span>
                 </li>
               </a>
+
               {/* Pinterest */}
               <a
                 rel="stylesheet"
                 href="https://in.pinterest.com/usindiaartandcultureexchangece/"
-                className="flex items-center space-x-3"
+                className="flex items-center space-x-3 justify-center lg:justify-start"
               >
                 <li className="flex items-center space-x-3">
                   <img
@@ -57,20 +74,27 @@ const Footer = () => {
                   <span>Pinterest</span>
                 </li>
               </a>
-              {/* X (formerly Twitter) */}
 
-              <a href="https://x.com/USIAC" className="flex items-center space-x-3">
+              {/* X (formerly Twitter) */}
+              <a
+                href="https://x.com/USIAC"
+                className="flex items-center space-x-3 justify-center lg:justify-start"
+              >
                 <li className="flex items-center space-x-3">
                   <img
                     src="/assets/TWITTER.png"
                     alt=""
                     className="w-6 lg:w-6 h-6 lg:h-6 rounded-md"
                   />
-                  <span>X</span>
+                  <span>Twitter</span>
                 </li>
               </a>
+
               {/* LinkedIn */}
-              <a href="https://www.linkedin.com/company/us-india-art-and-culture-exchange-center/about/" className="flex items-center space-x-3">
+              <a
+                href="https://www.linkedin.com/company/us-india-art-and-culture-exchange-center/about/"
+                className="flex items-center space-x-3 justify-center lg:justify-start"
+              >
                 <li className="flex items-center space-x-3">
                   <span className="inline-flex items-center justify-center w-6 h-6 bg-[#ff0080] text-white text-sm font-bold">
                     in
@@ -82,7 +106,7 @@ const Footer = () => {
           </div>
 
           {/* Column 2: Quick Links */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 lg:text-left">
             <h2 className="text-white text-lg font-semibold uppercase">
               Quick Links
             </h2>
@@ -108,10 +132,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="terms-and-conditions"
-                  className="hover:text-[#ff0080]"
-                >
+                <Link to="terms-and-conditions" className="hover:text-[#ff0080]">
                   Terms &amp; Conditions
                 </Link>
               </li>
@@ -119,7 +140,7 @@ const Footer = () => {
           </div>
 
           {/* Column 3: Newsletter */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 lg:text-left">
             <h2 className="text-white text-lg font-semibold uppercase">
               Newsletter
             </h2>
@@ -127,7 +148,8 @@ const Footer = () => {
               Subscribe to be the first to hear about our exclusive offers and
               latest arrivals
             </p>
-            <form className="flex items-center space-x-2">
+            {/* On smaller screens, center; on large screens, left-align */}
+            <form className="flex flex-col sm:flex-row items-center sm:items-center gap-2 justify-center lg:justify-start">
               <input
                 type="email"
                 placeholder="Enter your e-mail address"

@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
-import {cards} from "../constants/utils";
+import { cards } from "../constants/utils";
 
 const HomeProjectsProducts = () => {
-  // Create separate refs for the two scrollable containers
   const upperScrollRef = useRef(null);
   const lowerScrollRef = useRef(null);
 
@@ -28,29 +27,22 @@ const HomeProjectsProducts = () => {
     <section className="w-screen bg-black text-white py-16 px-4 md:px-8">
       {/* Heading & Subheading */}
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className=" text-4xl md:text-5xl font-bold uppercase text-[#e4005e]  tracking-wide">
+        <h2 className="text-4xl md:text-5xl font-bold uppercase text-[#e4005e] tracking-wide">
           Products &amp; Projects
         </h2>
         <p className="mt-4 text-gray-300 text-sm md:text-base leading-relaxed mx-auto">
           USIAC is where creativity and quality come together! We create
-          esthetically pleasing statues, sculptures, murals, paintings, wall art
-          in a variety of metals and materials including but not limited to
-          bronze, brass, copper, aluminum, stone, fiber, glass and more. We work
-          closely and creatively with customers and design products with only
-          the premium quality metal and materials.
+          aesthetically pleasing statues, sculptures, murals, paintings, and wall art in a variety of metals and materials including but not limited to bronze, brass, copper, aluminum, stone, fiber, glass and more. We work closely and creatively with customers and design products using only premium quality metals and materials.
         </p>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col space-y-12">
         {/* Upper Cards Container */}
         <div className="max-w-5xl mx-auto mt-12 relative overflow-visible">
           {/* Left Arrow */}
           <button
             onClick={scrollLeftUpper}
-            className="absolute top-1/2 -translate-y-1/2 left-[-6rem]
-              w-10 h-10 md:w-12 md:h-12 rounded-full bg-pink-700 hover:bg-pink-600
-              text-black shadow-md flex items-center justify-center
-              transition-colors duration-300 z-10 cursor-pointer"
+            className="absolute top-1/2 -translate-y-1/2 left-[-6rem] w-10 h-10 md:w-12 md:h-12 rounded-full bg-pink-700 hover:bg-pink-600 text-black shadow-md flex items-center justify-center transition-colors duration-300 z-10 cursor-pointer"
             aria-label="Scroll Left"
           >
             <svg
@@ -61,7 +53,7 @@ const HomeProjectsProducts = () => {
             >
               <path
                 fillRule="evenodd"
-                d="M12.293 15.293a1 1 0 010-1.414L15.586 10 l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                d="M12.293 15.293a1 1 0 010-1.414L15.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                 clipRule="evenodd"
               />
               <path
@@ -75,10 +67,7 @@ const HomeProjectsProducts = () => {
           {/* Right Arrow */}
           <button
             onClick={scrollRightUpper}
-            className="absolute top-1/2 -translate-y-1/2 right-[-6rem]
-              w-10 h-10 md:w-12 md:h-12 rounded-full bg-pink-700 hover:bg-pink-600
-              text-black shadow-md flex items-center justify-center
-              transition-colors duration-300 z-10 cursor-pointer"
+            className="absolute top-1/2 -translate-y-1/2 right-[-6rem] w-10 h-10 md:w-12 md:h-12 rounded-full bg-pink-700 hover:bg-pink-600 text-black shadow-md flex items-center justify-center transition-colors duration-300 z-10 cursor-pointer"
             aria-label="Scroll Right"
           >
             <svg
@@ -89,7 +78,7 @@ const HomeProjectsProducts = () => {
             >
               <path
                 fillRule="evenodd"
-                d="M12.293 15.293a1 1 0 010-1.414L15.586 10 l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                d="M12.293 15.293a1 1 0 010-1.414L15.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                 clipRule="evenodd"
               />
               <path
@@ -133,10 +122,7 @@ const HomeProjectsProducts = () => {
           {/* Left Arrow */}
           <button
             onClick={scrollLeftLower}
-            className="absolute top-1/2 -translate-y-1/2 left-[-6rem]
-              w-10 h-10 md:w-12 md:h-12 rounded-full bg-pink-700 hover:bg-pink-600
-              text-black shadow-md flex items-center justify-center
-              transition-colors duration-300 z-10 cursor-pointer"
+            className="absolute top-1/2 -translate-y-1/2 left-[-6rem] w-10 h-10 md:w-12 md:h-12 rounded-full bg-pink-700 hover:bg-pink-600 text-black shadow-md flex items-center justify-center transition-colors duration-300 z-10 cursor-pointer"
             aria-label="Scroll Left"
           >
             <svg
@@ -147,7 +133,7 @@ const HomeProjectsProducts = () => {
             >
               <path
                 fillRule="evenodd"
-                d="M12.293 15.293a1 1 0 010-1.414L15.586 10 l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                d="M12.293 15.293a1 1 0 010-1.414L15.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                 clipRule="evenodd"
               />
               <path
@@ -161,10 +147,7 @@ const HomeProjectsProducts = () => {
           {/* Right Arrow */}
           <button
             onClick={scrollRightLower}
-            className="absolute top-1/2 -translate-y-1/2 right-[-6rem]
-              w-10 h-10 md:w-12 md:h-12 rounded-full bg-pink-700 hover:bg-pink-600
-              text-black shadow-md flex items-center justify-center
-              transition-colors duration-300 z-10 cursor-pointer"
+            className="absolute top-1/2 -translate-y-1/2 right-[-6rem] w-10 h-10 md:w-12 md:h-12 rounded-full bg-pink-700 hover:bg-pink-600 text-black shadow-md flex items-center justify-center transition-colors duration-300 z-10 cursor-pointer"
             aria-label="Scroll Right"
           >
             <svg
@@ -175,7 +158,7 @@ const HomeProjectsProducts = () => {
             >
               <path
                 fillRule="evenodd"
-                d="M12.293 15.293a1 1 0 010-1.414L15.586 10 l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                d="M12.293 15.293a1 1 0 010-1.414L15.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                 clipRule="evenodd"
               />
               <path

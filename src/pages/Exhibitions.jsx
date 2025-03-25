@@ -20,7 +20,7 @@ const Exhibitions = () => {
         </h1>
 
         <div className="mb-8">
-          <div className="flex gap-4 py-2 justify-center">
+          <div className="flex gap-4 py-2 justify-center ">
             <button
               onClick={handleShowVideos}
               className={`${
@@ -64,7 +64,7 @@ const Exhibitions = () => {
 
         {/* For Images */}
         {!showVideos && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {exhibitons.images.map((imageData, index) => (
               <div
                 key={index}
